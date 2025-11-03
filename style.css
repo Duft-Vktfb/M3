@@ -23,9 +23,13 @@ body {
 }
 
 .up {
-  animation-name: slideDown;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: transform 2s ease-out, opacity 2s
+  ease-out;
+  }
+
+  .up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
