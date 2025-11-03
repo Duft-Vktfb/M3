@@ -23,5 +23,9 @@ body {
 }
 
 .up {
-  animation: slideDown 1s ease-out;
+  animation-name: slideDown;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
