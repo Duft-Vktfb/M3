@@ -33,3 +33,12 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+
+  .fade {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+  }
+
+  .fade.visible {
+    opacity: 1;
+  }
