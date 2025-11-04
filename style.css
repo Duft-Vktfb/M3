@@ -15,7 +15,7 @@ body {
   text-align: center;
   opacity: 0;
   transform: translateY(-100px);
-  animation: slideDown 1.5s ease-out forwards;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
 
 .up.animate {
