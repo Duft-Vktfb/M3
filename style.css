@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'M3Bold';
+  font-family: 'M3Bold', 'N';
   src: url('fonts/BigHit-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 body {
-  font-family: 'M3Bold', sans-serif;
+  font-family: 'M3Bold', 'Nunito', sans-serif;
   background-color: #000000;
   color: #ffffff;
 }
