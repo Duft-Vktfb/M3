@@ -15,7 +15,7 @@ body {
   text-align: center;
   opacity: 0;
   transform: translateY(-100px);
-  transition: transform 2s ease-out, opacity 2s ease-out;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
 
 .up.animate {
