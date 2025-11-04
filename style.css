@@ -13,4 +13,12 @@ body {
 
 .up {
   text-align: center;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: slideDown 1.5s ease-out forwards;
+}
+
+.up.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
