@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'M3Hybe';
-  src: url('fonts/M3xHybeCorp-Bold.woff2') format('woff2');
+  font-family: 'M3Bold';
+  src: url('BigHit-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 body {
-  font-family: 'M3Hybe', sans-serif;
+  font-family: 'M3Bold', sans-serif;
   background-color: #000000;
   color: #ffffff;
 }
