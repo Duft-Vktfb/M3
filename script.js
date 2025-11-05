@@ -1,3 +1,3 @@
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
 document.querySelector('.up').classList.add('animate');
 });
