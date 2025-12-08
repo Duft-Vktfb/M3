@@ -25,7 +25,7 @@ body {
 .up {
   text-align: center;
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-6.25rem);
   transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
 
