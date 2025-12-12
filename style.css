@@ -55,7 +55,7 @@ body {
   background-color: #FF8000;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
