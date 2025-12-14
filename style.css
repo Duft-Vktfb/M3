@@ -38,21 +38,22 @@ body {
   opacity: 0;
 }
 
-.fade.animate { animation: fadeIn 1.5s ease-out forwards; }
+.fade.animate { animation: fadeIn 1s ease-out forwards; }
 .fade-1.animate { animation-delay: 0.2s; }
 .fade-2.animate { animation-delay: 0.4s; }
 .fade-3.animate { animation-delay: 0.6s; }
 .fade-4.animate { animation-delay: 0.8s; }
+.fade-5.animate { animation-delay: 1s; }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .download-btn {
   display: inline-block;
   padding: 0.4rem 1.6rem;
-  background-color: #FF8000;
+  background-color: #ff6400;
   color: #fff;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -60,5 +61,5 @@ body {
 }
 
 .download-btn:hover {
-  background-color: #994d00;
+  background-color: #a44000;
 }
