@@ -13,32 +13,29 @@
      id="defs1" />
   <g
      id="layer1">
-    <g
-       id="g1">
-      <rect
-         style="fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1"
-         width="159.99998"
-         height="159.99982"
-         x="20.000008"
-         y="20" />
-      <circle
-         style="fill:#000000;fill-opacity:1;stroke:#ff6400;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-         id="path1"
-         cx="100"
-         cy="100"
-         r="98.000008" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:99.1754px;font-family:'Big Hit 201124';-inkscape-font-specification:'Big Hit 201124, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.9999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
-         x="105.1301"
-         y="130.46661"
-         id="text1"
-         transform="scale(0.95755284,1.0443288)"><tspan
-           id="tspan1"
-           style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:3.9999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-           x="105.1301"
-           y="130.46661">M3</tspan></text>
-    </g>
+    <rect
+       style="fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="159.99998"
+       height="159.99982"
+       x="20.000008"
+       y="20" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:#ff6400;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="path1"
+       cx="100"
+       cy="100"
+       r="98.000008" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:100.157px;font-family:'Big Hit 201124';-inkscape-font-specification:'Big Hit 201124, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.99999997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       x="106.07343"
+       y="130.93443"
+       id="path2"
+       transform="scale(0.95387929,1.0483507)"><tspan
+         id="tspan1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.99999997;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="106.07343"
+         y="130.93443">M3</tspan></text>
   </g>
 </svg>
