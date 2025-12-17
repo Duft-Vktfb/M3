@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!---->
+  <div class="gif-bg fade fade-3"></div>
+  <!---->
   <h1 class="up">MMM 3000 M3</h1>
   <hr class="fade fade-1">
   <h2 class="fade fade-2">Welcome to the page M3!</h2>
@@ -17,6 +20,21 @@
   <a class="fade fade-5 download-btn" href="https://raw.githubusercontent.com/Duft-Vktfb/M3/main/assets/M3.apk" download>
 		<img src="assets/Android.svg" alt="Download" style="width:2.5rem; height:2.5rem; vertical-align:middle; margin-right:0.4rem;">
   M3.apk</a>
+  <!---->
+  <audio id="bg-music" autoplay> <source src="https://raw.githubusercontent.com/Duft-Vktfb/M3/main/assets/Theme.flac" type="audio/flac"></audio>
+  <p id="autoplay-warning">
+    🔊 Allow Autoplay!
+  </p>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+   const audio = document.getElementById('bg-music');
+   const warning = document.getElementById('autoplay-warning');
+   audio.play().catch(() => {
+     warning.style.display = 'block';
+   });
+ });
+ </script>
+  <!---->
   <script src="main.js"></script>
 </body>
 </html>

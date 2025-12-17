@@ -63,3 +63,27 @@ body {
 .download-btn:hover {
   background-color: #a44000;
 }
+
+/**/
+.gif-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://raw.githubusercontent.com/Duft-Vktfb/M3/main/assets/Snow.gif') center center / cover no-repeat;
+  z-index: -1;
+}
+#autoplay-warning {
+  display: none;
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff6400;
+  background: rgba(0,0,0,0.6);
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: bold;
+}
+/**/
