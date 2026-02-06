@@ -14,16 +14,66 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
-  font-family: 'M3Bold', 'Aldrich', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  height: 100%;
+  width: 100%;
   margin: 0;
-  padding: 0 2rem;
+  color: #fff;
+  background: #000;
+  font-family: 'M3Bold', 'Aldrich', sans-serif;
+  overflow-x: hidden;
+}
+
+.disable-interactions {
+  pointer-events: none;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+@media (orientation: landscape) {
+  .wrapper {
+    padding: 0.8rem 2rem 0 2rem;
+  }
+
+  #alphabet {
+    white-space: normal;
+    word-break: break-all;
+  }
+}
+
+@media (orientation: portrait) {
+  .wrapper {
+    padding: 0.8rem 1.25rem 0 1.25rem;
+  }
+
+  #alphabet {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+.content {
+  width: 100%;
+  display: block;
+  transform-origin: top center;
 }
 
 .up {
   text-align: center;
+  margin: 0;
   opacity: 0;
   transform: translateY(-6.25rem);
   transition: transform 1.5s ease-out, opacity 1.5s ease-out;
@@ -50,40 +100,150 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.download-btn {
+.bar {
+  position: relative;
+  text-align: center;
+}
+
+#menu {
+  z-index: 9;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.375rem;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  padding: 0.1875rem;
+  right: 0.8125rem;
+  top: calc(12% - 0.1875rem);
+}
+
+#menu:hover {
+  background-color: #343434;
+  border-radius: 8px;
+  padding: 0.1875rem;
+  right: 0.8125rem;
+  top: calc(12% - 0.1875rem);
+}
+
+#menu.open {
+  background: rgba(255, 0, 0, 0.9);
+}
+
+#menu.open:hover {
+  background-color: #343434;
+}
+
+#menu span {
+  display: block;
+  height: 0.1875rem;
+  width: 100%;
+  background: white;
+  border-radius: 1px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#menu.open span:nth-child(1) {
+  transform: translateY(9px) rotate(-45deg);
+}
+
+#menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+#sideMenu {
+  z-index: 7;
+  position: absolute;
+  top: 12%;
+  right: calc(3rem + 12px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2.375rem;
+  padding: 0 0.3125rem;
+  margin: -0.1875rem;
+  gap: 12px;
+  border-radius: 8px;
+  background: rgba(30, 30, 30, 0.9);
+  opacity: 0;
+  transform: translateX(3rem) scale(0.6);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#sideMenu.open {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.item {
+  display: block;
+  z-index: 8;
+  width: auto;
+  height: 1.75rem;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #343434;
+  padding: 0.3125rem;
+  margin: -0.3125rem;
+  border-radius: 8px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  border-radius: 1px;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.banner {
+  background-image: url('assets/M3beng.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border-radius: 18px;
+}
+
+.island {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 0.075rem solid #909090;
+  box-shadow: 0 0 25px rgba(240, 210, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.p1 {
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.1875rem;
+}
+
+.island .download-btn {
   display: inline-block;
   padding: 0.4rem 1.6rem;
   background-color: #ff6400;
   color: #fff;
   text-decoration: none;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.download-btn:hover {
+.island .download-btn:hover {
   background-color: #a44000;
+  transform: scale(1.03);
 }
-
-/**/
-.gif-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('https://raw.githubusercontent.com/Duft-Vktfb/M3/main/assets/Snow.gif') center center / cover no-repeat;
-  z-index: -1;
-}
-#autoplay-warning {
-  display: none;
-  position: fixed;
-  bottom: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #ff6400;
-  background: rgba(0,0,0,0.6);
-  padding: 0.625rem 1.25rem;
-  border-radius: 0.375rem;
-  font-weight: bold;
-}
-/**/

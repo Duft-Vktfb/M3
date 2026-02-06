@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>M3</title>
   <meta name="keywords" content="MMM 3000 M3, M3">
   <meta name="description" content="MMM 3000 M3">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M3</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!---->
-  <div class="gif-bg fade fade-3"></div>
-  <!---->
-  <h1 class="up">MMM 3000 M3</h1>
-  <hr class="fade fade-1">
-  <h2 class="fade fade-2">Welcome to the page M3!</h2>
-  <p class="fade fade-3">0123456789</p>
-  <p class="fade fade-4">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpRrSsTtUuWwXxYyZz</p>
-  <a class="fade fade-5 download-btn" href="https://raw.githubusercontent.com/Duft-Vktfb/M3/main/assets/M3.apk" download>
-		<img src="assets/Android.svg" alt="Download" style="width:2.5rem; height:2.5rem; vertical-align:middle; margin-right:0.4rem;">
-  M3.apk</a>
-  <!---->
-  <audio id="bg-music" autoplay> <source src="https://raw.githubusercontent.com/Duft-Vktfb/M3/main/assets/Theme.mp3" type="audio/mpeg"></audio>
-  <p id="autoplay-warning">
-    🔊 Allow Autoplay!
-  </p>
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-   const audio = document.getElementById('bg-music');
-   const warning = document.getElementById('autoplay-warning');
-   audio.play().catch(() => {
-     warning.style.display = 'block';
-   });
- });
- </script>
-  <!---->
+  <div class="wrapper">
+    <div class="content" id="scalable-content">
+      <div class="bar">
+        <h1 class="up">MMM 3000 M3</h1>
+        <div class="fade fade-1" id="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="sideMenu">
+          <a href="https://www.youtube.com/@MMM_3000_M3" target="_blank">
+            <img src="assets/YouTube.svg" class="item">
+          </a>
+        </div>
+      </div>
+      <hr class="fade fade-1" id="line">
+      <h2 class="fade fade-2">Welcome to the page M3!</h2>
+      <p class="fade fade-3">0123456789</p>
+      <p class="fade fade-4" id="alphabet">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz</p>
+      <br>
+      <div style="text-align: center; margin-top: 32px;">
+        <div class="fade fade-5 banner">
+          <div class="island">
+            <p class="p1">FLASHLIGHT</p>
+            <a class="download-btn" href="https://raw.githubusercontent.com/Duft-Vktfb/M3/main/assets/M3.apk" download>
+              <img src="assets/Android.svg" alt="Download" style="width: 2.5rem; height: 2.5rem; vertical-align: middle; margin-right: 0.4rem;">
+            M3.apk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
