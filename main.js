@@ -91,64 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-async function signup() {
-    const email = document.getElementById("regEmail").value;
-    const password = document.getElementById("regPassword").value;
-
-    const res = await fetch(`${AUTH}/signup`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password })
-    });
-
-    const data = await res.json();
-
-    if (data.id) {
-        document.getElementById("signupMsg").innerText = "Konto utworzone! Możesz się zalogować.";
-    } else {
-        document.getElementById("signupMsg").innerText = JSON.stringify(data);
-    }
-}
-
-const AUTH = "https://ep-morning-voice-a4lcv2dr.apirest.us-east-1.aws.neon.tech/auth/v1";
-
-async function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    const res = await fetch(`${AUTH}/token`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password })
-    });
-
-    const data = await res.json();
-
-    if (data.token) {
-        localStorage.setItem("jwt", data.token);
-        document.getElementById("loginMsg").innerText = "Zalogowano!";
-    } else {
-        document.getElementById("loginMsg").innerText = JSON.stringify(data);
-    }
-}
-
-const REST = "https://ep-morning-voice-a4lcv2dr.apirest.us-east-1.aws.neon.tech/neondb/rest/v1";
-
 async function sendMessage() {
     const msg = document.getElementById("message").value;
-    const token = localStorage.getItem("jwt");
-
-    if (!token) {
-        document.getElementById("msg").innerText = "Musisz być zalogowany.";
-        return;
-    }
 
     const res = await fetch(`${REST}/messages`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`,
             "Prefer": "return=representation"
         },
         body: JSON.stringify({ content: msg })
