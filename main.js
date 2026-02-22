@@ -106,4 +106,28 @@ async function sendMessage() {
 
     const data = await res.json();
     document.getElementById("msg").innerText = JSON.stringify(data);
+
+    loadMessages();
 }
+
+async function loadMessages() {
+    const res = await fetch(`${REST}/messages?select=*`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+
+    const data = await res.json();
+
+    const container = document.getElementById("messagesList");
+    container.innerHTML = "";
+
+    data.forEach(msg => {
+        const div = document.createElement("div");
+        div.textContent = `${msg.created_at}: ${msg.content}`;
+        container.appendChild(div);
+    });
+}
+
+window.onload = loadMessages;
