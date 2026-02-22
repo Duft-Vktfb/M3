@@ -92,6 +92,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+async function signup() {
+    const email = document.getElementById("regEmail").value;
+    const password = document.getElementById("regPassword").value;
+
+    const res = await fetch(`${AUTH}/signup`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (data.id) {
+        document.getElementById("signupMsg").innerText = "Konto utworzone! Możesz się zalogować.";
+    } else {
+        document.getElementById("signupMsg").innerText = JSON.stringify(data);
+    }
+}
+
 const AUTH = "https://ep-morning-voice-a4lcv2dr.apirest.us-east-1.aws.neon.tech/auth/v1";
 
 async function login() {
