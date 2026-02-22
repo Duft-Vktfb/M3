@@ -174,7 +174,7 @@ body {
   border-radius: 8px;
   background: rgba(30, 30, 30, 0.9);
   opacity: 0;
-  transform: translateX(3rem) scale(0.6);
+  transform: translateX(4rem) scale(0.7);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
