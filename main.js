@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sideMenu.classList.toggle("open");
     });
 });
+const REST = "https://ep-morning-voice-a4lcv2dr.apirest.us-east-1.aws.neon.tech/neondb/rest/v1";
 
 async function sendMessage() {
     const msg = document.getElementById("message").value;
