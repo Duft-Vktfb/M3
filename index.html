@@ -47,58 +47,55 @@
         </div>
       </div>
 
-<!-- Sekcja zapisu i odczytu JSON -->
 <div style="margin-top: 60px; padding: 20px; border-top: 1px solid #444;">
-  <h2 style="text-align:center;">Zapis i odczyt JSON</h2>
-  
-    <textarea id="jsonText" placeholder="Wpisz tekst..." 
-                style="width:100%; height:150px; margin-top:10px;"></textarea>
-                
-                  <div style="text-align:center; margin-top:15px;">
-                      <button onclick="saveJSON()" 
-                                  style="padding:10px 20px; margin-right:10px;">Zapisz</button>
-                                  
-                                      <button onclick="loadJSON()" 
-                                                  style="padding:10px 20px;">Odczytaj</button>
-                                                    </div>
-                                                    
-                                                      <p id="jsonStatus" style="text-align:center; margin-top:10px; color:#0f0;"></p>
-                                                      </div>
-                                                      
-                                                      <script>
-                                                        const API = "http://89.168.71.224:3000";
-                                                        
-                                                          function saveJSON() {
-                                                              const text = document.getElementById("jsonText").value;
-                                                              
-                                                                  fetch(API + "/save", {
-                                                                        method: "POST",
-                                                                              headers: { "Content-Type": "application/json" },
-                                                                                    body: JSON.stringify({ text })
-                                                                                        })
-                                                                                            .then(res => res.json())
-                                                                                                .then(() => {
-                                                                                                      document.getElementById("jsonStatus").innerText = "Zapisano!";
-                                                                                                          })
-                                                                                                              .catch(() => {
-                                                                                                                    document.getElementById("jsonStatus").innerText = "Błąd połączenia z serwerem.";
-                                                                                                                        });
-                                                                                                                          }
-                                                                                                                          
-                                                                                                                            function loadJSON() {
-                                                                                                                                fetch(API + "/read")
-                                                                                                                                      .then(res => res.json())
-                                                                                                                                            .then(data => {
-                                                                                                                                                    document.getElementById("jsonText").value = data.text || "";
-                                                                                                                                                            document.getElementById("jsonStatus").innerText = "Odczytano!";
-                                                                                                                                                                  })
-                                                                                                                                                                        .catch(() => {
-                                                                                                                                                                                document.getElementById("jsonStatus").innerText = "Błąd połączenia z serwerem.";
-                                                                                                                                                                                      });
-                                                                                                                                                                                        }
-                                                                                                                                                                                        </script>
-                                                                                                                                                                                        -->
+      <h2 style="text-align:center;">Zapis i odczyt JSON</h2>
 
+          <textarea id="jsonText" placeholder="Wpisz tekst..." 
+                        style="width:100%; height:150px; margin-top:10px;"></textarea>
+
+                            <div style="text-align:center; margin-top:15px;">
+                                  <button onclick="saveJSON()" 
+                                                style="padding:10px 20px; margin-right:10px;">Zapisz</button>
+
+                                                      <button onclick="loadJSON()" 
+                                                                    style="padding:10px 20px;">Odczytaj</button>
+                                                                        </div>
+
+                                                                            <p id="jsonStatus" style="text-align:center; margin-top:10px; color:#0f0;"></p>
+                                                                              </div>
+
+                                                                                <script>
+                                                                                    const API = "http://89.168.71.224:3000";
+
+                                                                                        function saveJSON() {
+                                                                                              const text = document.getElementById("jsonText").value;
+
+                                                                                                    fetch(API + "/save", {
+                                                                                                            method: "POST",
+                                                                                                                    headers: { "Content-Type": "application/json" },
+                                                                                                                            body: JSON.stringify({ text })
+                                                                                                                                  })
+                                                                                                                                        .then(res => res.json())
+                                                                                                                                              .then(() => {
+                                                                                                                                                      document.getElementById("jsonStatus").innerText = "Zapisano!";
+                                                                                                                                                            })
+                                                                                                                                                                  .catch(() => {
+                                                                                                                                                                          document.getElementById("jsonStatus").innerText = "Błąd połączenia z serwerem.";
+                                                                                                                                                                                });
+                                                                                                                                                                                    }
+
+                                                                                                                                                                                        function loadJSON() {
+                                                                                                                                                                                              fetch(API + "/read")
+                                                                                                                                                                                                      .then(res => res.json())
+                                                                                                                                                                                                              .then(data => {
+                                                                                                                                                                                                                        document.getElementById("jsonText").value = data.text || "";
+                                                                                                                                                                                                                                  document.getElementById("jsonStatus").innerText = "Odczytano!";
+                                                                                                                                                                                                                                          })
+                                                                                                                                                                                                                                                  .catch(() => {
+                                                                                                                                                                                                                                                            document.getElementById("jsonStatus").innerText = "Błąd połączenia z serwerem.";
+                                                                                                                                                                                                                                                                    });
+                                                                                                                                                                                                                                                                        }
+    </script>
     </div>
   </div>
   <script src="main.js"></script>
