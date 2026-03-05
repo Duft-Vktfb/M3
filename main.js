@@ -102,4 +102,8 @@ setTimeout(() => {
 
 closeBtn.addEventListener("click", () => {
   toast.classList.remove("show");
+
+  toast.addEventListener("transitionend", () => {
+    toast.remove();
+  }, { once: true });
 });
