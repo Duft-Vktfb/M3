@@ -85,8 +85,21 @@ window.addEventListener('resize', () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
+    const sideMenu = document.getElementById("sideMenu");
     menu.addEventListener("click", () => {
         menu.classList.toggle("open");
         sideMenu.classList.toggle("open");
     });
+});
+
+const toast = document.getElementById("toast");
+const closeBtn = document.getElementById("toast-close");
+
+setTimeout(() => {
+  toast.classList.remove("hidden");
+  toast.classList.add("show");
+}, 6000);
+
+closeBtn.addEventListener("click", () => {
+  toast.classList.remove("show");
 });

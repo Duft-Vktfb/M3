@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: 'M3Regular';
+  src: url('fonts/BigHit-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Aldrich';
   src: url('fonts/Aldrich.woff2') format('woff2');
   font-weight: normal;
@@ -47,7 +55,7 @@ body {
   .wrapper {
     padding: 0.8rem 2rem 0 2rem;
   }
-
+  
   #alphabet {
     white-space: normal;
     word-break: break-all;
@@ -58,7 +66,7 @@ body {
   .wrapper {
     padding: 0.8rem 1.25rem 0 1.25rem;
   }
-
+  
   #alphabet {
     margin: 0;
     white-space: nowrap;
@@ -246,4 +254,46 @@ hr {
 .island .download-btn:hover {
   background-color: #a44000;
   transform: scale(1.03);
+}
+
+#toast {
+  font-family: 'M3Regular', 'M3Bold', sans-serif;
+  position: fixed;
+  margin: 0 4px;
+  bottom: 4px;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(0);
+  background: #fff7c2;
+  border: 2px solid #f4a742;
+  color: #915f00;
+  padding: 0 4px;
+  gap: 12px;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#toast-text {
+  color: inherit;
+}
+
+#toast button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: inherit;
+}
+
+#toast.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
