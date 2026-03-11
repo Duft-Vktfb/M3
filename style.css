@@ -256,7 +256,7 @@ hr {
   transform: scale(1.03);
 }
 
-#toast {
+/*#toast {
   font-family: 'M3Regular', 'M3Bold', sans-serif;
   position: fixed;
   margin: 0 4px;
@@ -296,4 +296,4 @@ hr {
 #toast.show {
   opacity: 1;
   transform: translateY(0);
-}
+}*/

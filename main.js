@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const toast = document.getElementById("toast");
+/*const toast = document.getElementById("toast");
 const closeBtn = document.getElementById("toast-close");
 
 setTimeout(() => {
@@ -106,4 +106,4 @@ closeBtn.addEventListener("click", () => {
   toast.addEventListener("transitionend", () => {
     toast.remove();
   }, { once: true });
-});
+});*/
