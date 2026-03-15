@@ -224,6 +224,11 @@ hr {
   background-repeat: no-repeat;
   display: inline-block;
   border-radius: 18px;
+  white-space: nowrap;
+}
+
+.banner-material {
+  background-image: url('assets/M3aterial.png');
 }
 
 .island {
@@ -235,10 +240,15 @@ hr {
   backdrop-filter: blur(5px);
 }
 
+.island-material {
+  box-shadow: 0 0 25px rgb(240, 255, 210, 0.4);
+}
+
 .p1 {
   margin-top: -0.25rem;
   margin-bottom: 1rem;
   font-size: 1.1875rem;
+  text-align: center;
 }
 
 .island .download-btn {
